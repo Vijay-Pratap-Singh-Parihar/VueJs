@@ -16,6 +16,7 @@ export default {
         this.LoginForm.loginLastName,
         this.LoginForm.loginPin
       );
+      // document.write(this.LoginForm.loginFirstName);
     },
   },
 };
