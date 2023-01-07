@@ -6,28 +6,30 @@ import loginPage from "./components/Login.vue";
 
 <template>
   <header>
-    <img
+    <!-- <img
       alt="Vue logo"
       class="logo"
       src="@/assets/logo.svg"
       width="125"
       height="125"
-    />
+    /> -->
 
     <!-- <testApplication writeMsg="I am writing this message" /> -->
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-      <loginPage />
+      <!-- <HelloWorld msg="You did it!" /> -->
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/test">Test</RouterLink>
+        <RouterLink to="/login">login</RouterLink>
       </nav>
     </div>
   </header>
+  <div class="loginForm">
+    <loginPage />
+  </div>
 
-  <RouterView />
+  <!-- <RouterView /> -->
 </template>
 
 <style scoped>
@@ -64,6 +66,12 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+
+.loginForm {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
 }
 
 @media (min-width: 1024px) {
