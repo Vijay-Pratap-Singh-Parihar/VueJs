@@ -1,22 +1,24 @@
-<script setup>
-
-export default{
-    name: "About",
-    data() {
-        return{
-            LoginForm:{
-            loginFirstName:"",
-                loginLastName:"",
-                loginPin:"",
-            }
-        }
+<script>
+export default {
+  data() {
+    return {
+      LoginForm: {
+        loginFirstName: null,
+        loginLastName: null,
+        loginPin: null,
+      },
+    };
+  },
+  methods: {
+    login(e) {
+      console.log(
+        this.LoginForm.loginFirstName,
+        this.LoginForm.loginLastName,
+        this.LoginForm.loginPin
+      );
     },
-    methods: {
-        about:(e){
-            console.log(this.LoginForm.loginFirstName, this.LoginForm.loginLastName, this.LoginForm.loginPin)
-        }
-    }
-}
+  },
+};
 </script>
 
 <template>
@@ -30,9 +32,7 @@ export default{
       <br />
       Pin Code:
       <input type="text" v-model="LoginForm.loginPin" name="pinCode" /><br />
-      Code:
-      <input type="text" v-model="LoginForm.loginPin" name="pinCode" /><br />
-      <button v-on:click="about">Submit</button>
+      <button v-on:click="login">Submit</button>
     </form>
   </div>
 </template>
